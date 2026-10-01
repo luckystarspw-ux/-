@@ -1,0 +1,271 @@
+<HTML>
+<HEAD>
+<TITLE>HTML練習</TITLE>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+<style>
+  h1 {
+    text-align: center;
+    font-family: "Parisienne", cursive;
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: normal;
+    letter-spacing: 2px;
+    margin: 18px 0 38px;
+    color: #2d211e;
+    text-shadow: 0 2px 0 rgba(255, 255, 255, 0.7);
+  }
+
+  h1::before {
+    content: "CONCERT PERCUSSION";
+    display: block;
+    margin-bottom: 8px;
+    font-family: Georgia, serif;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #87695b;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px 20px 60px;
+    background:
+      repeating-linear-gradient(0deg, transparent 0, transparent 28px, rgba(127, 99, 83, 0.06) 29px, transparent 30px),
+      linear-gradient(135deg, #f8f3ed 0%, #e7ddd2 100%);
+    color: #332622;
+    font-family: Georgia, serif;
+  }
+
+  .links {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .links a {
+    display: block;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid rgba(116, 91, 79, 0.28);
+    border-radius: 14px;
+    color: #332622;
+    background: rgba(255, 253, 250, 0.88);
+    text-decoration: none;
+    position: relative;
+    box-shadow: 0 8px 18px rgba(74, 53, 44, 0.1);
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+  }
+
+  .links a img {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 14px;
+    border-radius: 9px;
+    background: #ffffff;
+  }
+
+  .pearl-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 10px;
+    color: #87695b;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .pearl-categories span {
+    padding: 4px 8px;
+    border: 1px solid rgba(116, 91, 79, 0.28);
+    border-radius: 999px;
+    background: #f8f3ed;
+  }
+
+  .links a p {
+    margin: 10px 4px 2px;
+    line-height: 1.6;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .links a:hover {
+    background: #fffefa;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 26px rgba(74, 53, 44, 0.18);
+  }
+
+  .links a:not(:has(img)) {
+    text-align: center;
+    padding: 24px 12px;
+  }
+
+  .image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(35, 25, 21, 0.82);
+    cursor: zoom-out;
+  }
+
+  .image-modal.is-open {
+    display: flex;
+  }
+
+  .image-modal img {
+    max-width: min(90vw, 1100px);
+    max-height: 86vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    background: #ffffff;
+  }
+</style>
+</HEAD>
+
+</HEAD>
+<body>
+<div style="text-align: center;">
+  <h1>Concert Snare Drums</h1>
+</div>
+<div class="links">
+  <a href="https://pearldrum.com/ja/products/concert/concert-snare-drums" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="PEARLのカテゴリー">
+      <span>中価格</span>
+      <span>バランス</span>
+      <span>安定</span>
+      <span>中音域〜高音域</span>
+    </div>
+    <img src="pearl-snare.jpg" alt="Pearl Philharmonic コンサートスネアドラム">
+    Pearl
+    <p>ストレイナーやスナッピーの調整幅が広く、弱奏から強奏まで音量を作りやすい。アタックが揃いやすく、吹奏楽で扱いやすい。</p>
+  </a>
+  <a href="https://ak-drums.com/snare-drums/" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="AK Drumsのカテゴリー">
+      <span>高価格</span>
+      <span>カスタム</span>
+      <span>音色重視</span>
+      <span>低〜高音域</span>
+    </div>
+    <img src="https://ak-drums.com/media/1614/p1190340.jpg?height=1200" alt="AK Drums スネアドラム">
+    AK Drums
+    <p>シェルやパーツの選択によって音色を細かく作り込めるタイプ。大きな音を出すだけでなく、ロールやゴーストノートの粒を揃えやすい。</p>
+  </a>
+  <a href="https://www.nonaka.com/ludwig/products/snaredrum/index_concert.html" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="Ludwigのカテゴリー">
+      <span>中〜高価格</span>
+      <span>太い音</span>
+      <span>存在感</span>
+      <span>低音域〜中音域</span>
+    </div>
+    <img src="https://www.nonaka.com/ludwig/products/snaredrum/img/concert/lcs514aktd.webp" alt="Ludwig コンサートスネアドラム">
+    Ludwig
+    <p>木胴モデルではシェルの振動が音に出やすく、スティックを深く入れたときに太い音を作りやすい。強く叩いても高音だけが突出しにくい。</p>
+  </a>
+  <a href="https://www.tama.com/jp/products/concert/concert_snare_drum/" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="TAMAのカテゴリー">
+      <span>低〜中価格</span>
+      <span>反応</span>
+      <span>アタック</span>
+      <span>中音域〜高音域</span>
+    </div>
+    <img src="https://www.tama.com/common/product_artist_file/file/pen_CMP146MF_GMC_Header.jpg" alt="TAMA コンサートスネアドラム">
+    TAMA
+    <p>スナッピーの反応が速く、弱いタップでも音が立ちやすい。リムショットではアタックが強く出るため、アクセントを明確にしやすい。</p>
+  </a>
+  <a href="https://komakitsusho.co.jp/sn/snare/sq2-cl/" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="SONORのカテゴリー">
+      <span>高価格</span>
+      <span>繊細</span>
+      <span>表現力</span>
+      <span>低〜高音域</span>
+    </div>
+    <img src="https://komakitsusho.co.jp/pd/wp-content/uploads/2026/01/SN_product_sq2_sd2.webp" alt="SONOR SQ2 スネアドラム">
+    SONOR
+    <p>シェルの鳴りとスナッピーの反応のバランスが良く、ロールで音の粒を揃えやすい。チューニングによる音程・倍音の変化も出しやすい。</p>
+  </a>
+  <a href="https://komakitsusho.co.jp/mj/sd/" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="Majesticのカテゴリー">
+      <span>中〜高価格</span>
+      <span>クラシック</span>
+      <span>マルチソニック</span>
+      <span>中音域〜高音域</span>
+    </div>
+    <img src="https://komakitsusho.co.jp/pd/wp-content/uploads/2026/01/MJ_product_snare2.webp" alt="Majestic コンサートスネアドラム">
+    Majestic
+    <p>オーケストラや吹奏楽で使うことを想定したモデルが中心。高めにチューニングしても音が細くなりすぎず、ロールを柔らかくまとめやすい。</p>
+  </a>
+  <a href="https://www.nonaka.com/blackswamppercussion/products/#anc_snaredrum" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="Black Swamp Percussionのカテゴリー">
+      <span>高価格</span>
+      <span>精密</span>
+      <span>コントロール</span>
+      <span>マルチソニック</span>
+      <span>低〜高音域</span>
+    </div>
+    <img src="https://www.nonaka.com/blackswamppercussion/assets/images/products/sd_ms514_wad.webp" alt="Black Swamp Percussion スネアドラム">
+    Black Swamp Percussion
+    <p>スナッピー、ストレイナー、シェルなどの組み合わせを細かく選べる。特にロール・弱奏・アーティキュレーションの違いを演奏に反映させやすい。</p>
+  </a>
+  <a href="https://jp.yamaha.com/products/musical_instruments/percussion/snare_drums/osm/index.html" target="_blank" rel="noopener">
+    <div class="pearl-categories" aria-label="YAMAHAのカテゴリー">
+      <span>低〜中価格</span>
+      <span>安定</span>
+      <span>汎用性</span>
+      <span>中音域〜高音域</span>
+    </div>
+    <img src="https://jp.yamaha.com/files/Image-index_OSM-Series_1080x1080_73e733fec4641081b4b6a383bdf5e2bd.jpg?impolicy=resize&amp;imwid=1080&amp;imhei=1080" alt="YAMAHA OSM スネアドラム">
+    YAMAHA
+    <p>音量を小さくしたときもスナッピーが反応しやすく、弱奏からフォルテまで音の立ち上がりを揃えやすい。合奏の中で音が埋もれにくい設計。</p>
+  </a>
+</div>
+<div class="image-modal" id="imageModal" aria-hidden="true">
+  <img id="modalImage" src="" alt="">
+</div>
+<script>
+  const imageModal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+
+  document.querySelectorAll(".links img").forEach((image) => {
+    image.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      modalImage.src = image.src;
+      modalImage.alt = image.alt;
+      imageModal.classList.add("is-open");
+      imageModal.setAttribute("aria-hidden", "false");
+    });
+  });
+
+  imageModal.addEventListener("click", () => {
+    imageModal.classList.remove("is-open");
+    imageModal.setAttribute("aria-hidden", "true");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      imageModal.classList.remove("is-open");
+      imageModal.setAttribute("aria-hidden", "true");
+    }
+  });
+</script>
+</body>
+
+
+
+
+
+
+
+</HTML>
+
+
